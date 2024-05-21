@@ -1,0 +1,133 @@
+<style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px auto 300px;
+    grid-template-areas: "left main right";
+    height: 100vh;
+}
+
+.left-sidebar {
+    grid-area: left;
+    background-color: #eee;
+    padding: 20px;
+}
+
+.profile-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 20px;
+}
+
+.tweet-box textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    border-color: pink;
+}
+
+.profile-pic img {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    margin-right: 10px; 
+}
+.right-sidebar {
+    grid-area: right;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: pink;
+}
+.trends , .network {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: pink;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "main"
+            "left"
+            "right";
+    }
+
+    .left-sidebar, .right-sidebar {
+        display: none;
+    }
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon-container i {
+    color: #c0c0c0; 
+    font-size: 20px; 
+    margin-right: 10px; 
+}
+.icon-container i:hover {
+    color: pink; 
+}
+
+
+.tweet-interactions {
+    display: flex;
+    align-items:center;
+    justify-content: space-around; 
+    padding: 8px 0; 
+}
+
+.tweet-interactions i {
+    color: #657786; 
+    font-size: 15px; 
+    cursor:pointer; 
+}
+
+.tweet-interactions i:hover {
+    color: pink; 
+}
+
+
+.navigation li {
+    padding: 10px;
+    font-size: 16px; 
+    color: #333; 
+    display: flex;
+    align-items: center; 
+}
+
+.navigation li i {
+    margin-right: 10px; 
+}
+
+.navigation li:hover {
+    background-color: #f2f2f2; 
+    cursor: pointer;
+}
+
+</style>
